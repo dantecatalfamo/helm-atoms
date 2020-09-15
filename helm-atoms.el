@@ -7,12 +7,15 @@
 (require 'helm)
 
 (defun helm-atoms--string-atom (atom)
-  "Return (name . value) for ATOMs that are strings."
-  (when (and (boundp atom)
-             (stringp (symbol-value atom))
-             (not (string-match-p "\n" (symbol-value atom))))
-    (cons (format "%s: %s" (propertize (symbol-name atom) 'face font-lock-variable-name-face) (symbol-value atom))
-          atom)))
+  "Return (name . value) for single line ATOMs."
+  (when (boundp atom)
+    (let ((value (symbol-value atom)))
+      (when (numberp value)
+        (setq value (number-to-string value)))
+      (when (and (stringp value)
+                 (not (string-match-p "\n" value)))
+        (cons (format "%s: %s" (propertize (symbol-name atom) 'face font-lock-variable-name-face) value)
+              atom)))))
 
 (defun helm-atoms--create-atom-list ()
   "Create helm caididates for helm-atoms."
