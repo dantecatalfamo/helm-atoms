@@ -22,15 +22,16 @@
                   (push val candidates))))
     candidates))
 
-(setq helm-source-string-atoms
+(defvar helm-source-atoms
       (helm-build-sync-source "String atoms"
         :candidates #'helm-atoms--create-atom-list
-        :action #'identity))
+        :action #'identity)
+        "Helm source for helm-atoms.")
 
 (defun helm-atoms ()
   "Use helm to search through all single line strinng atoms."
   (interactive)
-  (helm :sources '(helm-source-string-atoms)))
+  (helm :sources '(helm-source-atoms)))
 
 
 (provide 'helm-atoms)
