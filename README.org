@@ -5,3 +5,5 @@
   on numbers and strings, including multiline strings.
 
   [[file:helm-atoms.gif]]
+** Commands
+   =helm-atoms= Open the helm-atoms interface
