@@ -1,5 +1,5 @@
 * helm-atoms
-  Find a variable without knowing its name!
+  *Find a variable without knowing its name!*
 
   Perform reverse variable lookups for Emacs Lisp using Helm.  Works
   on numbers and strings, including multiline strings.
