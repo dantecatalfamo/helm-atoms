@@ -12,7 +12,7 @@
 ;;; Commentary:
 
 ;; Perform reverse variable lookups for Emacs Lisp using Helm.
-;; Works on numbers and multiline strings.
+;; Works on numbers and strings, including multiline strings.
 
 ;;; Commands
 
