@@ -1,4 +1,4 @@
-;;; helm-atoms.el -- Find atom using helm
+;;; helm-atoms.el -- Reverse variable lookup using Helm
 
 ;;; Commentary:
 
