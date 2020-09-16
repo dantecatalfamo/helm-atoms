@@ -3,7 +3,7 @@
 ;; Copyright (C) 2020 Dante Catalfamo
 
 ;; Author: Dante Catalfamo
-;; Version: 0.0.2
+;; Version: 0.1.2
 ;; Package-Requires: ((emacs "24") (helm))
 ;; URL: https://github.com/dantecatalfamo/helm-atoms
 
