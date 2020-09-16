@@ -49,6 +49,7 @@
         :action #'identity)
         "Helm source for `helm-atoms'.")
 
+;;;###autoload
 (defun helm-atoms ()
   "Reverse variable lookup using helm."
   (interactive)
