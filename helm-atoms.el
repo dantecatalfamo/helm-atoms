@@ -1,6 +1,22 @@
-;;; helm-atoms.el -- Reverse variable lookup using Helm
+;;; helm-atoms.el -- Reverse variable lookup using Helm  -*- lexical-binding: t -*-
+
+;; Copyright (C) 2020 Dante Catalfamo
+
+;; Author: Dante Catalfamo
+;; Version: 0.0.2
+;; Package-Requires: ((emacs "24") (helm))
+;; URL: https://github.com/dantecatalfamo/helm-atoms
+
+;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
+
+;; Perform reverse variable lookups for Emacs Lisp using Helm.
+;; Works on numbers and multiline strings.
+
+;;; Commands
+
+;; `helm-atoms' Open the helm interface
 
 ;;; Code:
 
