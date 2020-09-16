@@ -34,7 +34,12 @@
 (defun helm-atoms ()
   "Use helm to search through all single line strinng atoms."
   (interactive)
-  (helm :sources '(helm-source-atoms)))
+  (let ((symbol (helm :sources '(helm-source-atoms))))
+    (unless (null symbol)
+      (if (require 'helpful nil 'noerror)
+          (helpful-variable symbol)
+        (describe-variable symbol)))))
+
 
 
 (provide 'helm-atoms)
