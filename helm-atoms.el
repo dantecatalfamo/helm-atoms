@@ -7,7 +7,7 @@
 (require 'helm)
 
 (defun helm-atoms--string-atom (atom)
-  "Return (name . value) for single line ATOMs."
+  "Return ((\"name: value\" . name) ...) for each line in ATOM."
   (when (boundp atom)
     (let ((value (symbol-value atom)))
       (when (numberp value)
@@ -34,7 +34,7 @@
         "Helm source for helm-atoms.")
 
 (defun helm-atoms ()
-  "Use helm to search through all single line strinng atoms."
+  "Reverse variable lookup using helm."
   (interactive)
   (let ((symbol (helm :sources '(helm-source-atoms))))
     (unless (null symbol)
