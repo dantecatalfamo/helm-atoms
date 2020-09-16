@@ -4,7 +4,7 @@
 
 ;; Author: Dante Catalfamo
 ;; Version: 0.1.2
-;; Package-Requires: ((emacs "24") (helm))
+;; Package-Requires: ((emacs "25.1") (helm))
 ;; URL: https://github.com/dantecatalfamo/helm-atoms
 
 ;; This file is not part of GNU Emacs.
@@ -36,7 +36,7 @@
                   candidates)))))))
 
 (defun helm-atoms--create-atom-list ()
-  "Create helm caididates for helm-atoms."
+  "Create helm caididates for `helm-atoms'."
   (let (candidates)
     (mapatoms (lambda (atom)
                 (when-let (val (helm-atoms--string-atom atom))
@@ -47,7 +47,7 @@
       (helm-build-sync-source "String / Number atoms"
         :candidates #'helm-atoms--create-atom-list
         :action #'identity)
-        "Helm source for helm-atoms.")
+        "Helm source for `helm-atoms'.")
 
 (defun helm-atoms ()
   "Reverse variable lookup using helm."
