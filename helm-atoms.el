@@ -1,10 +1,10 @@
-;;; helm-atoms.el -- Reverse variable lookup using Helm  -*- lexical-binding: t -*-
+;;; helm-atoms.el --- Reverse variable lookup using Helm  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2020 Dante Catalfamo
 
 ;; Author: Dante Catalfamo
 ;; Version: 0.1.2
-;; Package-Requires: ((emacs "25.1") (helm))
+;; Package-Requires: ((emacs "25.1") (helm "2.0"))
 ;; URL: https://github.com/dantecatalfamo/helm-atoms
 
 ;; This file is not part of GNU Emacs.
