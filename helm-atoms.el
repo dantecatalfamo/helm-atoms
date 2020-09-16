@@ -26,7 +26,7 @@
     candidates))
 
 (defvar helm-source-atoms
-      (helm-build-sync-source "String atoms"
+      (helm-build-sync-source "String / Number atoms"
         :candidates #'helm-atoms--create-atom-list
         :action #'identity)
         "Helm source for helm-atoms.")
