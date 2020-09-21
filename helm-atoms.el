@@ -6,6 +6,7 @@
 ;; Version: 0.1.2
 ;; Package-Requires: ((emacs "25.1") (helm "2.0"))
 ;; URL: https://github.com/dantecatalfamo/helm-atoms
+;; SPDX-License-Identifier: GPL-3.0-or-later
 
 ;; This file is not part of GNU Emacs.
 
