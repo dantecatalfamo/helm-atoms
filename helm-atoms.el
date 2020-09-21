@@ -44,6 +44,8 @@
 
 (require 'helm)
 
+(declare-function helpful-variable "ext:helpful.el" t t) ; Prevent byte-compiler warnings
+
 (defgroup helm-atoms nil
   "Reverse variable lookup using Helm."
   :group 'helm)
