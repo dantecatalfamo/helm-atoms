@@ -33,9 +33,26 @@
 
 ;; `helm-atoms' Open the helm interface
 
+;;; Customization
+
+;; `helm-atoms-search-sequences'
+;; Search atoms bound to sequences (lists, vectors).
+;; More thorough search, but worse performance.
+
+
 ;;; Code:
 
 (require 'helm)
+
+(defgroup helm-atoms nil
+  "Reverse variable lookup using Helm."
+  :group 'helm)
+
+(defcustom helm-atoms-search-sequences nil
+  "Search atoms bound to sequences (lists, vectors).
+More thorough search, but worse performance."
+  :type 'boolean
+  :group 'helm-atoms)
 
 (defun helm-atoms--string-atom (atom)
   "Return ((\"name: value\" . name) ...) for each line in ATOM."
@@ -43,6 +60,9 @@
     (let ((value (symbol-value atom)))
       (when (numberp value)
         (setq value (number-to-string value)))
+      (when (and (sequencep value)
+                 helm-atoms-search-sequences)
+        (setq value (prin1-to-string value)))
       (when (stringp value)
         (let (candidates)
           (dolist (line (split-string value "\n" t) candidates)
