@@ -57,7 +57,7 @@
   "Reverse variable lookup using helm."
   (interactive)
   (let ((symbol (helm :sources '(helm-source-atoms))))
-    (unless (null symbol)
+    (when symbol
       (if (require 'helpful nil 'noerror)
           (helpful-variable symbol)
         (describe-variable symbol)))))
