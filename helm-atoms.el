@@ -6,6 +6,7 @@
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "25.1") (helm "2.0"))
 ;; URL: https://github.com/dantecatalfamo/helm-atoms
+;; Keywords: help lisp maint helm tools matching
 
 ;; This file is not part of GNU Emacs.
 
