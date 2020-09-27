@@ -1,5 +1,6 @@
 * helm-atoms
   [[https://melpa.org/#/helm-atoms][file:https://melpa.org/packages/helm-atoms-badge.svg]]
+
   *Find a variable without knowing its name!*
 
   Perform an interactive reverse variable lookups for Emacs Lisp using
